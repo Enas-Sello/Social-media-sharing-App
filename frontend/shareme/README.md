@@ -4,7 +4,7 @@
 npm i --legacy-peer-deps
 # depndences
 
-# sanity config
+# sanity conect to back end config 
 sanity/client
 sanity/image-url
 # google auth
@@ -14,6 +14,9 @@ react-icons
 react-loader-spinner 
 react-masonry-css
 react-router-dom
+
+# unique id
+uuid 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
