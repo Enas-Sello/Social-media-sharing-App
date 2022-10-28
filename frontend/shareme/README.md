@@ -1,6 +1,19 @@
 # Social-media-sharing-App
 
+# start 
+npm i --legacy-peer-deps
+# depndences
 
+# sanity config
+sanity/client
+sanity/image-url
+# google auth
+react-google-login
+# react liberarys
+react-icons
+react-loader-spinner 
+react-masonry-css
+react-router-dom
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
