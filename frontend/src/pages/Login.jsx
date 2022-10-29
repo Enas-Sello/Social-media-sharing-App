@@ -4,8 +4,16 @@ import { useNavigate } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc';
 import shareVideo from '../assets/share.mp4';
 import logowhite from '../assets/logowhite.png';
+import { gapi } from 'gapi-script';
 import client from '../client';
-const Login = () => {
+const Login = () =>
+{
+  window.gapi.load('client:auth2', () => {
+    window.gapi.client.init({
+      clientId: process.env.REACT_APP_GOOGLE_API_TOKEN,
+      plugin_name: 'chat',
+    });
+  });
   const navigate = useNavigate();
   const responseGoogle = ( response ) =>
   {
@@ -33,6 +41,7 @@ const Login = () => {
           autoPlay
           className="w-full h-full object-cover"
         />
+
         <div className="absolute right-0 bottom-0 top-0 left-0 flex flex-col justify-center items-center bg-blackOverlay">
           <div className="p-5">
             <img src={logowhite} alt="logo" width="130px" />
@@ -44,8 +53,9 @@ const Login = () => {
                 <button
                   type="button"
                   className="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none"
-                  onClick={renderProps.onClick}
-                  disabled={renderProps.disabled}
+                  onClick={ renderProps.onClick }
+                  disabled={ renderProps.disabled }
+                  onTouchCancel={ false }
                 >
                   <FcGoogle className="mr-4" /> Sign in with google
                 </button>
