@@ -1,23 +1,23 @@
 import React from 'react';
-import GoogleLogin from 'react-google-login';
 import { useNavigate } from 'react-router-dom';
+import GoogleLogin from 'react-google-login';
+import client from '../client';
 import { FcGoogle } from 'react-icons/fc';
 import shareVideo from '../assets/share.mp4';
 import logowhite from '../assets/logowhite.png';
 import { gapi } from 'gapi-script';
-import client from '../client';
-const Login = () =>
-{
+const Login = () => {
+  const navigate = useNavigate();
+  //google sigin fix
   window.gapi.load('client:auth2', () => {
     window.gapi.client.init({
       clientId: process.env.REACT_APP_GOOGLE_API_TOKEN,
       plugin_name: 'chat',
     });
   });
-  const navigate = useNavigate();
-  const responseGoogle = ( response ) =>
-  {
-    console.log(response)
+  //google signin func
+  const responseGoogle = (response) => {
+    console.log(response);
     localStorage.setItem('user', JSON.stringify(response.profileObj));
     const { name, googleId, imageUrl } = response.profileObj;
     const doc = {
@@ -26,6 +26,7 @@ const Login = () =>
       userName: name,
       image: imageUrl,
     };
+    //conect google signin to back end
     client.createIfNotExists(doc).then(() => {
       navigate('/', { replace: true });
     });
@@ -53,9 +54,9 @@ const Login = () =>
                 <button
                   type="button"
                   className="bg-mainColor flex justify-center items-center p-3 rounded-lg cursor-pointer outline-none"
-                  onClick={ renderProps.onClick }
-                  disabled={ renderProps.disabled }
-                  onTouchCancel={ false }
+                  onClick={renderProps.onClick}
+                  disabled={renderProps.disabled}
+                  onTouchCancel={false}
                 >
                   <FcGoogle className="mr-4" /> Sign in with google
                 </button>
