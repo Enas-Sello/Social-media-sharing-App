@@ -3,20 +3,13 @@ import { NavLink, Link } from 'react-router-dom';
 import { RiHomeFill } from 'react-icons/ri';
 import { IoIosArrowForward } from 'react-icons/io';
 import logo from '../assets/logo.png';
+import { categories } from '../utils/data';
 
 const isNotActiveStyle =
   'flex items-center px-5 gap-3 text-gray-500 hover:text-black transition-all duration-200 ease-in-out capitalize';
 
 const isActiveStyle =
   'flex items-center px-5 gap-3 font-extrabold border-l-2 border-black  transition-all duration-200 ease-in-out capitalize';
-
-const categories = [
-  { name: 'Animals' },
-  { name: 'Wallpapers' },
-  { name: 'Photography' },
-  { name: 'Coding' },
-  { name: 'Gaming' },
-];
 
 const Sidebar = ({ closeToggle, user }) => {
   const handelcloseToggle = () => {
@@ -56,9 +49,9 @@ const Sidebar = ({ closeToggle, user }) => {
               key={category.name}
               onClick={handelcloseToggle}
             >
-              <IoIosArrowForward/>
+              <IoIosArrowForward />
               <img
-                src={user?.image}
+                src={category?.image}
                 alt="user-profile"
                 className="rounded-full w-8 h-8"
               />
@@ -67,10 +60,11 @@ const Sidebar = ({ closeToggle, user }) => {
           ))}
         </div>
       </div>
+      {/* user  */}
       {user && (
         <Link
           to={`user-profile/${user._id}`}
-          className="flex items-center my-5 mx-3 gap-4 bg-gray-100 rounded-lg drop-shadow-2xl  w-fit p-2"
+          className="flex items-center my-6 mx-3 gap-4 bg-gray-200 rounded-lg drop-shadow-2xl  w-fit p-2"
           onClick={handelcloseToggle}
         >
           <img

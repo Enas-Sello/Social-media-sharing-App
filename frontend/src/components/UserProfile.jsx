@@ -1,9 +1,7 @@
 import React from 'react'
 
-const UserProfile = () => {
-  return (
-    <div>UserProfile</div>
-  )
+const UserProfile = ({user}) => {
+  return <div>{user.userName}</div>;
 }
 
 export default UserProfile
