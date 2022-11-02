@@ -14,11 +14,11 @@ export const categories = [
     image:
       'https://i.pinimg.com/236x/03/48/b6/0348b65919fcbe1e4f559dc4feb0ee13.jpg',
   },
-  {
-    name: 'websites',
-    image:
-      'https://i.pinimg.com/750x/66/b1/29/66b1296d36598122e6a4c5452b5a7149.jpg',
-  },
+  // {
+  //   name: 'websites',
+  //   image:
+  //     'https://i.pinimg.com/750x/66/b1/29/66b1296d36598122e6a4c5452b5a7149.jpg',
+  // },
   {
     name: 'photo',
     image:
@@ -35,30 +35,30 @@ export const categories = [
       'https://i.pinimg.com/236x/b9/82/d4/b982d49a1edd984c4faef745fd1f8479.jpg',
   },
   {
-    name: 'art',
+    name: 'space',
     image:
-      'https://i.pinimg.com/736x/f4/e5/ba/f4e5ba22311039662dd253be33bf5f0e.jpg',
+      'https://images.unsplash.com/photo-1454789548928-9efd52dc4031?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3BhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=900&q=60',
   },
   {
     name: 'travel',
     image:
       'https://i.pinimg.com/236x/fa/95/98/fa95986f2c408098531ca7cc78aee3a4.jpg',
   },
-  {
-    name: 'quotes',
-    image:
-      'https://i.pinimg.com/236x/46/7c/17/467c17277badb00b638f8ec4da89a358.jpg',
-  },
+  // {
+  //   name: 'quotes',
+  //   image:
+  //     'https://i.pinimg.com/236x/46/7c/17/467c17277badb00b638f8ec4da89a358.jpg',
+  // },
   {
     name: 'cats',
     image:
       'https://i.pinimg.com/236x/6c/3c/52/6c3c529e8dadc7cffc4fddedd4caabe1.jpg',
   },
-  {
-    name: 'dogs',
-    image:
-      'https://i.pinimg.com/236x/1b/c8/30/1bc83077e363db1a394bf6a64b071e9f.jpg',
-  },
+  // {
+  //   name: 'dogs',
+  //   image:
+  //     'https://i.pinimg.com/236x/1b/c8/30/1bc83077e363db1a394bf6a64b071e9f.jpg',
+  // },
   {
     name: 'others',
     image:

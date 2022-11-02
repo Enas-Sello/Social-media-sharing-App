@@ -1,4 +1,7 @@
 # Social-media-sharing-App
+![ShareMe](https://ibb.co/tBJ497q)
+
+Using React, Tailwind & Sanity
 
 # start 
 npm i --legacy-peer-deps
