@@ -101,9 +101,9 @@ const PinDetail = ({ user }) => {
                 rel="noreferrer"
                 className="text-gray-400 hover:text-red-500 hover:font-semibold"
               >
-                {pinDetail.destination.length > 40
-                  ? pinDetail.destination.slice(8, 22)
-                  : pinDetail.destination.slice(8)}
+                {pinDetail?.destination.length > 40
+                  ? pinDetail?.destination.slice(8, 22)
+                  : pinDetail?.destination}
               </a>
             </div>
             <div className="">

@@ -83,7 +83,7 @@ const Pin = ({ pin: { postedBy, image, destination, _id, save } }) => {
                   type="button"
                   className="text-white bg-red-500 rounded-3xl px-5 py-1 opacity-70 hover:opacity-100 font-bold text-base hover:shadow-xl outline-none "
                 >
-                  {save?.length}
+                  {save?.length}{' '}
                   Saved
                 </button>
               ) : (
@@ -106,7 +106,7 @@ const Pin = ({ pin: { postedBy, image, destination, _id, save } }) => {
                   <BsFillArrowUpRightCircleFill />
                   {destination.length > 20
                     ? destination.slice(8, 22)
-                    : destination.slice(8)}
+                    : destination}
                 </a>
               )}
               {postedBy?._id === userInfo.googleId && (
@@ -128,10 +128,10 @@ const Pin = ({ pin: { postedBy, image, destination, _id, save } }) => {
       >
         <img
           src={postedBy?.image}
-          alt="posted By"
+          alt=""
           className="rounded-full w-7 h-7 object-cover bg-slate-900"
         />
-        <p className=" font-semibold capitalize">{postedBy.userName}</p>
+        <p className=" font-semibold capitalize">{postedBy?.userName}</p>
       </Link>
     </div>
   );

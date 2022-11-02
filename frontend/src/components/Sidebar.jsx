@@ -40,6 +40,7 @@ const Sidebar = ({ closeToggle, user }) => {
           <h3 className="mt-1 px-5 text-base 2xl:text-xl">
             discover cateogries
           </h3>
+          {/* categories */}
           {categories.slice(0, categories.length - 1).map((category) => (
             <NavLink
               to={`category/${category.name}`}

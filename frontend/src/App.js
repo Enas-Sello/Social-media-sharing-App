@@ -1,9 +1,17 @@
-import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useNavigate } from 'react-router-dom';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import { fetchUser } from './utils/fetchUser';
+import { useEffect } from 'react';
 
 function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const user = fetchUser();
+    if (!user) navigate('/login');
+  }, []);
+
   return (
     <div className=" capitalize hide-scrollbar">
       <Routes>

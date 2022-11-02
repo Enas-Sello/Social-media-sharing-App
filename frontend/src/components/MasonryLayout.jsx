@@ -18,7 +18,7 @@ const MasonryLayout = ({ pins }) => {
       className="flex animate-slide-fwd "
       // columnClassName="my-masonry-grid_column"
     >
-      { pins.map( ( pin ) => (
+      { pins?.map( ( pin ) => (
         <Pin key={ pin._id } pin={ pin } className='w-max'/>))}
     </Masonry>
   );

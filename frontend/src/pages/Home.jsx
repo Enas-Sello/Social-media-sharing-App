@@ -8,7 +8,7 @@ import { HiMenu } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 //componants
 import Sidebar from '../components/Sidebar';
-import UserProfile from '../components/UserProfile';
+import UserProfile from './UserProfile';
 import Pins from '../pages/Pins';
 import { fetchUser } from '../utils/fetchUser';
 
